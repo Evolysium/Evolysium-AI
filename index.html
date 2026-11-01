@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evolysium AI | Next-Gen P2P Arena & Smart Contract Infrastructure</title>
+    
+    <!-- Google SEO & Search Engine Indexing -->
+    <title>Evolysium AI | Next-Gen Web3 Gaming, P2P Betting & Autonomous Infrastructure</title>
+    <meta name="description" content="Evolysium AI combines real-time streaming, social feeds, instant P2P wagering, and on-chain smart contract verification into a unified Web3 gaming ecosystem.">
+    <meta name="keywords" content="Evolysium, Evolysium AI, P2P Betting, Web3 Gaming, Crypto Wagers, Live Streaming, Web3 Social Feed, Sepolia Smart Contract">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media Sharing -->
+    <meta property="og:title" content="Evolysium AI | The Future of Decentralized Gaming & Social P2P Betting">
+    <meta property="og:description" content="Stream live action, challenge peers in transparent wagers, share clips on the feed, and verify every settlement on-chain. Zero middlemen, pure adrenaline.">
+    <meta property="og:type" content="website">
+
     <style>
         :root {
-            --bg-color: #0b0d14;
-            --card-bg: #131722;
+            --bg-color: #07090e;
+            --card-bg: rgba(19, 23, 34, 0.6);
+            --card-border: rgba(255, 255, 255, 0.08);
             --accent-cyan: #00f2fe;
             --accent-purple: #7928ca;
-            --text-main: #f1f5f9;
+            --accent-glow: rgba(0, 242, 254, 0.25);
+            --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --border-color: #1e293b;
+            --max-width: 1200px;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
 
         body {
@@ -27,34 +40,60 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(121, 40, 202, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(0, 242, 254, 0.12) 0%, transparent 40%);
+            background-attachment: fixed;
         }
 
+        /* Navigation */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
-            border-bottom: 1px solid var(--border-color);
-            background: rgba(11, 13, 20, 0.8);
-            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            background: rgba(7, 9, 14, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--card-border);
         }
 
-        .logo {
-            font-size: 1.5rem;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-badge {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            box-shadow: 0 0 10px var(--accent-cyan);
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
             font-weight: 800;
-            letter-spacing: 1px;
-            background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+            letter-spacing: 1.5px;
+            background: linear-gradient(135deg, #fff 30%, var(--accent-cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
 
         nav a {
             color: var(--text-muted);
             text-decoration: none;
-            margin-left: 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
@@ -62,183 +101,425 @@
             color: var(--accent-cyan);
         }
 
+        .nav-btn {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            color: #fff !important;
+            padding: 0.6rem 1.4rem;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 0 15px var(--accent-glow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+        }
+
+        /* Hero Section */
         .hero {
+            padding: 8rem 5% 5rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 8rem 1rem 6rem;
-            background: radial-gradient(circle at center, rgba(121, 40, 202, 0.15) 0%, transparent 70%);
+        }
+
+        .tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            max-width: 800px;
+            font-size: 3.8rem;
+            font-weight: 800;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
-            line-height: 1.2;
+            max-width: 900px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
             font-size: 1.25rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 750px;
             margin-bottom: 2.5rem;
+            font-weight: 400;
         }
 
-        .btn {
-            display: inline-block;
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--card-border);
             padding: 0.8rem 2rem;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-            color: #fff;
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.5);
-        }
-
-        .features {
+        /* Section Layouts */
+        section {
             padding: 5rem 5%;
-            max-width: 1200px;
+            max-width: var(--max-width);
             margin: 0 auto;
         }
 
-        .section-title {
+        .section-header {
+            margin-bottom: 3.5rem;
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
         }
 
-        .grid {
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Grid Cards */
+        .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
         .card {
             background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: border-color 0.3s;
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .card:hover {
-            border-color: var(--accent-cyan);
+            transform: translateY(-5px);
+            border-color: rgba(0, 242, 254, 0.3);
         }
 
         .card-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.1), rgba(121, 40, 202, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--card-border);
         }
 
         .card h3 {
-            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.98rem;
+            line-height: 1.7;
         }
 
-        .contract-info {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            max-width: 800px;
-            margin: 3rem auto;
-            text-align: center;
+        /* Story / Manifest Block */
+        .manifesto {
+            background: linear-gradient(180deg, rgba(19, 23, 34, 0.8) 0%, rgba(7, 9, 14, 0.9) 100%);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            margin: 4rem auto;
         }
 
-        .code-block {
-            background: #000;
-            padding: 0.8rem;
-            border-radius: 6px;
+        .manifesto-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .manifesto h3 {
+            font-size: 2rem;
             color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+        }
+
+        .manifesto p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        /* Smart Contract Box */
+        .contract-box {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contract-address {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #000;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
             font-family: monospace;
-            margin-top: 1rem;
+            font-size: 1.05rem;
+            color: var(--accent-cyan);
+            margin-top: 1.5rem;
             word-break: break-all;
         }
 
+        /* Footer */
         footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid var(--card-border);
+            padding: 4rem 5% 2rem;
+            background: rgba(4, 5, 8, 0.95);
             color: var(--text-muted);
             font-size: 0.9rem;
         }
 
+        .footer-grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .footer-bottom {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
+            .hero h1 { font-size: 2.4rem; }
             .hero p { font-size: 1rem; }
+            nav { display: none; }
+            .manifesto { padding: 2rem 1.5rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Navigation -->
     <header>
-        <div class="logo">EVOLYSIUM AI</div>
+        <div class="logo-container">
+            <div class="logo-badge"></div>
+            <div class="logo-text">EVOLYSIUM AI</div>
+        </div>
         <nav>
-            <a href="#features">Features</a>
-            <a href="#contract">Smart Contract</a>
-            <a href="#about">About</a>
+            <a href="#story">Story</a>
+            <a href="#ecosystem">Ecosystem</a>
+            <a href="#feed">Social Feed</a>
+            <a href="#contract">On-Chain</a>
+            <a href="#" class="nav-btn">Launch Arena</a>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Autonomous AI & Decentralized P2P Betting Infrastructure</h1>
-        <p>Powering transparent gaming, automated match verification, and zero-intermediary smart contract settlement on the Sepolia network.</p>
-        <a href="#" class="btn btn-primary">Launch P2P Arena</a>
+        <div class="tagline">⚡ Decentralized Web3 Gaming & P2P Infrastructure</div>
+        <h1>The Autonomous Arena For <span>Peer-To-Peer Gaming</span> & Live Action</h1>
+        <p>Evolysium AI bridges high-speed live streaming, social interaction, and non-custodial Web3 betting into one seamless, transparent ecosystem powered by Ethereum smart contracts.</p>
+        <div class="cta-group">
+            <a href="#" class="nav-btn" style="padding: 0.9rem 2.2rem; font-size: 1rem;">Enter P2P Arena</a>
+            <a href="#story" class="btn-secondary">Read Our Story</a>
+        </div>
     </section>
 
-    <section class="features" id="features">
-        <h2 class="section-title">Core Ecosystem Features</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-icon">⚡</div>
-                <h3>Real-Time On-Chain Verification</h3>
-                <p>Instant verification protocol ensuring 100% transparent status checking directly against Ethereum smart contracts.</p>
+    <!-- Story & Mission Section -->
+    <section id="story">
+        <div class="manifesto">
+            <div class="manifesto-content">
+                <h3>The Story Behind Evolysium</h3>
+                <p>Traditional gaming and betting platforms are fundamentally broken. They rely on opaque algorithms, centralized control, delayed payouts, and high house fees that siphon value away from players and content creators. Gaming was meant to be competitive, social, and instant—not bogged down by middlemen holding your funds.</p>
+                <p>We built <strong>Evolysium AI</strong> to redefine this dynamic. We combined real-time video streaming, dynamic social feeds, and non-custodial crypto wallets directly with decentralized smart contracts. Whether you are contesting a head-to-head race, streaming live gameplay, or sharing winning highlights with your followers, Evolysium ensures total transparency and instant on-chain execution.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Core Ecosystem Modules -->
+    <section id="ecosystem">
+        <div class="section-header">
+            <h2>The Complete Evolysium Ecosystem</h2>
+            <p>A unified suite designed for streamers, gamers, and Web3 enthusiasts who demand speed, autonomy, and security.</p>
+        </div>
+
+        <div class="grid-3">
             <div class="card">
-                <div class="card-icon">🎮</div>
-                <h3>P2P Wager Arena</h3>
-                <p>Create, manage, and accept custom gaming wagers seamlessly without central intermediaries or delayed payouts.</p>
+                <div class="card-icon">🏎️</div>
+                <h3>Live Streaming & Arena</h3>
+                <p>High-speed, low-latency live streaming integrated directly into match lobbies. Stream competitive races, showcase live gameplay, and broadcast your matches in real time without third-party delay.</p>
             </div>
+
+            <div class="card">
+                <div class="card-icon">⚖️</div>
+                <h3>Peer-To-Peer Betting</h3>
+                <p>Create custom, head-to-head wagers with zero intermediary intervention. Funds stay locked in transparent smart contracts until match conditions are verified and rewards are instantly distributed.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📱</div>
+                <h3>Social Feed & Stories</h3>
+                <p>Share match highlights, highlight victories, post short-form video stories, and engage with your community. Build your Web3 gaming reputation and turn wins into viral social moments.</p>
+            </div>
+
             <div class="card">
                 <div class="card-icon">🤖</div>
-                <h3>AI Matchmaking Engine</h3>
-                <p>Intelligent player analytics and match verification protocols designed to deliver fair competitive play.</p>
+                <h3>AI Match Verification</h3>
+                <p>Intelligent analytics engines analyze game telemetry and state feeds to verify match outcomes, preventing dispute delays and ensuring unbiased final settlements.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h3>Non-Custodial Wallet Integration</h3>
+                <p>Connect your Web3 wallet seamlessly. Retain full ownership of your private keys and crypto assets at all times—no deposit locks or withdrawal limits.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Decentralized Ledger</h3>
+                <p>Every match result, smart contract trigger, and reward settlement is recorded immutably on the blockchain for complete public auditability.</p>
             </div>
         </div>
     </section>
 
-    <section class="contract-info" id="contract">
-        <h2>Deployed Verification Smart Contract</h2>
-        <p>Operating live on Sepolia Testnet for zero-trust ledger execution.</p>
-        <div class="code-block">
-            0xBceD6293Cb21f19DFC507042a0642d7241305Eb0
+    <!-- Smart Contract Transparency Section -->
+    <section id="contract">
+        <div class="section-header">
+            <h2>Deployed On-Chain Infrastructure</h2>
+            <p>Absolute transparency is our core principle. Check our live smart contract deployment on the Sepolia Testnet.</p>
+        </div>
+
+        <div class="contract-box">
+            <h3>Verified Smart Contract Address</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Handles non-custodial escrow, peer-to-peer wager creation, and automatic payouts.</p>
+            <div class="contract-address">
+                <span>0xBceD6293Cb21f19DFC507042a0642d7241305Eb0</span>
+            </div>
         </div>
     </section>
 
-    <section class="features" id="about" style="text-align: center; padding-top: 0;">
-        <h2 class="section-title">Built For The Web3 Gaming Era</h2>
-        <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">
-            Evolysium AI combines cutting-edge web infrastructure with blockchain security to empower streamers, gamers, and Web3 enthusiasts with complete control over their competitive matches.
-        </p>
-    </section>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Evolysium AI Technologies. All rights reserved.</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-container">
+                    <div class="logo-badge"></div>
+                    <div class="logo-text">EVOLYSIUM AI</div>
+                </div>
+                <p>Building the decentralized future of competitive gaming, live streaming, and peer-to-peer Web3 protocols.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">P2P Arena</a></li>
+                    <li><a href="#">Live Streams</a></li>
+                    <li><a href="#">Community Feed</a></li>
+                    <li><a href="#">AI Verification</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Ecosystem</h4>
+                <ul>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#contract">Sepolia Contract</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">GitHub Repo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#">Twitter / X</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Discord Community</a></li>
+                    <li><a href="#">Telegram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Evolysium AI Technologies. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
