@@ -313,32 +313,44 @@
 </head>
 <body>
 
-        <!-- Header / Navigacija -->
-    <header style="display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; position: sticky; top: 0; z-index: 1000; background: rgba(11, 13, 20, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid #1e293b;">
+                <!-- Header with EE Logo and Clean Menu -->
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 4%; position: sticky; top: 0; z-index: 1000; background: rgba(11, 13, 20, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #1e293b;">
         <div style="display: flex; align-items: center; gap: 10px;">
-            <div style="width: 12px; height: 12px; border-radius: 50%; background: #00f2fe; box-shadow: 0 0 10px #00f2fe;"></div>
-            <div style="font-size: 1.4rem; font-weight: 800; letter-spacing: 1.5px; background: linear-gradient(135deg, #00f2fe, #7928ca); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">EVOLYSIUM AI</div>
+            <div style="width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, #00f2fe, #7928ca); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.95rem; color: #fff; box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);">EE</div>
+            <div style="font-size: 1.2rem; font-weight: 800; letter-spacing: 1px; background: linear-gradient(135deg, #00f2fe, #7928ca); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">EVOLYSIUM</div>
         </div>
         
-        <nav style="display: flex; gap: 2rem; align-items: center;">
-            <a href="#story" style="color: #94a3b8; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s;">Priča</a>
-            <a href="#ecosystem" style="color: #94a3b8; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s;">Mogućnosti</a>
-            <a href="#contract" style="color: #94a3b8; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s;">Ugovor</a>
-            <a href="https://evolysium.github.io/evolysium-frontend/" style="background: linear-gradient(135deg, #00f2fe, #7928ca); color: #fff; padding: 0.6rem 1.4rem; border-radius: 8px; font-weight: 600; text-decoration: none; box-shadow: 0 0 15px rgba(0, 242, 254, 0.3); transition: all 0.3s ease;">Otvori Arenu</a>
+        <nav style="display: flex; gap: 1.5rem; align-items: center;">
+            <a href="#story" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Our Story</a>
+            <a href="#ecosystem" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Features</a>
+            <a href="https://evolysium.github.io/evolysium-frontend/" style="background: linear-gradient(135deg, #00f2fe, #7928ca); color: #fff; padding: 0.5rem 1.1rem; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 0.9rem; box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);">Launch Arena</a>
         </nav>
     </header>
 
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="tagline">⚡ Next-Gen Decentralized Gaming & P2P Infrastructure</div>
-        <h1>Autonomous AI & Decentralized <span>P2P Arena Platform</span></h1>
-        <p>Powering transparent gaming, automated match verification, live action streaming, and zero-intermediary smart contract settlement on the Sepolia network.</p>
-        <div class="cta-group">
-            <a href="https://evolysium.github.io/evolysium-frontend/" class="nav-btn" style="padding: 0.9rem 2.2rem; font-size: 1rem;">Launch P2P Arena</a>
-            <a href="#story" class="btn-secondary">Read Our Story</a>
+
+
+            <!-- Hero Section - Clean, Human-Friendly Text -->
+    <section class="hero" style="padding: 5rem 5% 4rem; max-width: 1200px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: #131722; border: 1px solid #1e293b; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; color: #00f2fe; margin-bottom: 1.5rem;">
+            ⚡ Secure peer-to-peer wagering and live streams
+        </div>
+        
+        <h1 style="font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; max-width: 900px;">
+            Where you play, <span style="background: linear-gradient(135deg, #00f2fe, #7928ca); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">win, and stream</span> without middlemen
+        </h1>
+        
+        <p style="font-size: 1.1rem; color: #94a3b8; max-width: 700px; margin-bottom: 2.5rem; line-height: 1.6;">
+            Connect with players, challenge rivals head-to-head, watch live action streams, and enjoy complete peace of mind with instant smart contract settlements.
+        </p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://evolysium.github.io/evolysium-frontend/" style="background: linear-gradient(135deg, #00f2fe, #7928ca); color: #fff; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);">Launch Arena</a>
+            <a href="#story" style="background: #131722; color: #f1f5f9; border: 1px solid #1e293b; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none;">Read Our Story</a>
         </div>
     </section>
+
+
 
     <!-- Story & Mission Section -->
     <section id="story">
